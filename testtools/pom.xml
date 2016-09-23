@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>nl.stolwijk.nick.equalsverifier.osgitest</groupId>
+	<artifactId>testtools</artifactId>
+	<name>JUnit Testtools</name>
+	<description>Deze bundle bundelt de diverse tools die we gebruiken om te testen. Deze zijn vooral gebundeld om OSGi compatible te zijn.</description>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>bundle</packaging>
+	<properties>
+		<bundle-symbolicname>${project.groupId}.${project.artifactId}</bundle-symbolicname>
+		<junit.version>4.12</junit.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.21</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>1.10.19</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>nl.jqno.equalsverifier</groupId>
+			<artifactId>equalsverifier</artifactId>
+			<version>2.1.5</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>3.2.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Export-Package>junit.*;version=${junit.version},org.junit.*;version=${junit.version},!org.hamcrest.*,*</Export-Package>
+						<Embed-Dependency>*;scope=provided</Embed-Dependency>
+						<Embed-Transitive>true</Embed-Transitive>
+						<_exportcontents>*</_exportcontents>
+						<Import-Package>!sun.misc,!org.mockito.asm.signature,!nl.jqno.equalsverifier.internal.lib.bytebuddy.jar.asm.tree,*</Import-Package>
+						<_nouses>true</_nouses>
+						<_snapshot>${osgi-version-qualifier}</_snapshot>
+						<Bundle-SymbolicName>${bundle-symbolicname}</Bundle-SymbolicName>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8/"?>
+<target includeMode="feature" name="LOXIA Eclipse Targetplatform" sequenceNumber="1">
+    <locations>
+        <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+            <unit id="org.eclipse.rcp.source.feature.group" version="4.5.2.v20160212-1500"/>
+            <unit id="org.eclipse.platform.sdk" version="4.5.2.M20160212-1500"/>
+            <unit id="org.eclipse.equinox.sdk.feature.group" version="3.11.2.v20160202-2102"/>
+            <unit id="org.eclipse.ecf.filetransfer.feature.feature.group" version="3.12.0.v20151130-0157"/>
+            <unit id="org.eclipse.pde.feature.group" version="3.11.2.v20160212-1500"/>
+            <unit id="org.eclipse.jdt.source.feature.group" version="3.11.2.v20160212-1500"/>
+            <unit id="org.eclipse.pde.source.feature.group" version="3.11.2.v20160212-1500"/>
+            <unit id="org.eclipse.jdt.feature.group" version="3.11.2.v20160212-1500"/>
+            <unit id="org.eclipse.emf.ecore.feature.group" version="2.11.2.v20160208-0816"/>
+            <unit id="org.eclipse.e4.rcp.feature.group" version="1.4.1.v20160212-1350"/>
+            <unit id="org.eclipse.rcp.configuration.feature.group" version="1.0.102.v20160212-1500"/>
+            <unit id="org.eclipse.rcp.feature.group" version="4.5.2.v20160212-1500"/>
+            <unit id="org.eclipse.swt.tools.feature.feature.group" version="3.104.2.v20160128-0900"/>
+            <unit id="org.eclipse.sdk.ide" version="4.5.2.M20160212-1500"/>
+            <unit id="org.eclipse.platform.feature.group" version="4.5.2.v20160212-1500"/>
+            <unit id="org.eclipse.platform.ide" version="4.5.2.M20160212-1500"/>
+            <unit id="org.eclipse.osgi.compatibility.plugins.feature.feature.group" version="1.0.0.v20150202-1328"/>
+            <unit id="org.eclipse.emf.common.feature.group" version="2.11.1.v20160208-0816"/>
+            <unit id="org.eclipse.sdk.examples.source.feature.group" version="3.5.501.v20160212-1500"/>
+            <unit id="org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group" version="3.12.0.v20151130-0157"/>
+            <unit id="org.eclipse.help.feature.group" version="2.1.2.v20160212-1500"/>
+            <unit id="org.eclipse.ecf.core.feature.feature.group" version="1.2.0.v20151130-0157"/>
+            <unit id="org.eclipse.e4.core.tools.feature.source.feature.group" version="4.5.1.v20160129-0959"/>
+            <unit id="org.eclipse.jdt.annotation" version="2.0.100.v20150311-1658"/>
+            <repository location="http://download.eclipse.org/eclipse/updates/4.5/"/>
+        </location>
+    </locations>
+    <environment>
+        <os>win32</os>
+        <ws>win32</ws>
+        <arch>x86</arch>
+        <nl>nl_NL</nl>
+    </environment>
+    <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+</target>
